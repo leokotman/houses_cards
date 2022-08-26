@@ -60,7 +60,7 @@ function App() {
 				<ProductsList homes={homes} />
 			</section>
 			<button className="see-more" aria-label="see more" title="see more">
-				See more <img src={arrow} alt="arrow right" width="17" height="7" />
+				See more <img src={arrow} alt="arrow right" width="7" height="17" />
 			</button>
 		</div>
 	);
