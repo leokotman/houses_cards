@@ -1,6 +1,15 @@
 .product-list {
     display: flex;
     flex-wrap: wrap;
-    column-gap: 1.375rem;
+    justify-content: space-between;
     row-gap: 2.375rem;
+}
+.router-link {
+    color: inherit;
+}
+.router-link:hover {
+    border: 1px solid #36363665;
+}
+.router-link:visited {
+    color: inherit;
 }

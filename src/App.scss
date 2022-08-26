@@ -8,6 +8,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  margin: 0 auto;
 
   .container {
     padding: 3.4vw 3.9vw 0;
@@ -16,10 +17,28 @@
     font-size: variables.$h1-size;
     color: #45852D;
     text-align: center;
+    margin: 2.25rem 0 0;
   }
   .filter-block {
     font-size: 1rem;
+    font-weight: bold;
+    line-height: 2.5rem;
     align-self: flex-start;
+    .filter span {
+      margin: 0 1rem 0 0;
+    }
+    .filter__input {
+      border: 1px solid #D8D8D8;
+      border-radius: 25px;
+      box-sizing: border-box;
+      font-size: inherit;
+      padding: .5rem;
+      height: 3.125rem;
+      width: 32.6vw;
+      max-width: 418px;
+      min-width: 100px;
+      text-align: center;
+    }
   }
   button.see-more {
     margin: 0 auto;

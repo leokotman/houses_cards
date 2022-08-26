@@ -1,13 +1,18 @@
+import { Link } from 'react-router-dom';
 import ProductCard from "./ProductCard";
 import "../assets/styles/list.scss";
 
 function ProductsList(props) {
 	return (
-		<div className="product-list">
+			<div className="product-list">
 			{props.homes.map((home, index) => {
-				return <ProductCard key={index} home={home} />;
+				return (
+				<Link to={`/details/${home.id}`} key={index} className="router-link">
+					<ProductCard key={index} home={home} />	
+				</Link>
+				);
 			})}
-		</div>
+			</div>
 	);
 }
 
