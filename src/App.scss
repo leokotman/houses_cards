@@ -1,10 +1,21 @@
-@use "./theme.scss";
+@use "assets/styles/theme.scss" as variables;
+@use "assets/styles/fonts.css";
 
 .App {
   text-align: left;
+  font-family: variables.$font-family;
+  color: variables.$text-color;
 
   .container {
     padding: 3.4vw 3.9vw 0;
+  }
+  h1 {
+    font-size: variables.$h1-size;
+    color: #45852D;
+    text-align: center;
+  }
+  .filter {
+    font-size: 1rem;
   }
 }
 
