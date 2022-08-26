@@ -2,47 +2,75 @@
 @use "assets/styles/fonts.css";
 
 .App {
-  text-align: left;
-  font-family: variables.$font-family;
-  color: variables.$text-color;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 0 auto;
+	text-align: left;
+	font-family: variables.$font-family;
+	color: variables.$text-color;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	margin: 0 auto;
 
-  .container {
-    padding: 3.4vw 3.9vw 0;
-  }
-  h1 {
-    font-size: variables.$h1-size;
-    color: #45852D;
-    text-align: center;
-    margin: 2.25rem 0 0;
-  }
-  .filter-block {
-    font-size: 1rem;
-    font-weight: bold;
-    line-height: 2.5rem;
-    align-self: flex-start;
-    .filter span {
-      margin: 0 1rem 0 0;
-    }
-    .filter__input {
-      border: 1px solid #D8D8D8;
-      border-radius: 25px;
-      box-sizing: border-box;
-      font-size: inherit;
-      padding: .5rem;
-      height: 3.125rem;
-      width: 32.6vw;
-      max-width: 418px;
-      min-width: 100px;
-      text-align: center;
-    }
-  }
-  button.see-more {
-    margin: 0 auto;
-  }
+	.container {
+		padding: 3.4vw 3.9vw 0;
+	}
+	h1 {
+		font-size: variables.$h1-size;
+		color: #45852d;
+		text-align: center;
+		margin: 2.25rem 0 0;
+	}
+	.filter-block {
+		font-size: 1rem;
+		font-weight: bold;
+		line-height: 2.5rem;
+		align-self: flex-start;
+
+		.filter span {
+			margin: 0 1rem 0 0;
+		}
+		.filter__input {
+			border: 1px solid #d8d8d8;
+			border-radius: 25px;
+			box-sizing: border-box;
+			font-size: inherit;
+			padding: 0.5rem;
+			height: 3.125rem;
+			width: 32.6vw;
+			max-width: 418px;
+			min-width: 100px;
+			text-align: center;
+		}
+	}
+	button.see-more {
+		background-color: #fff;
+		border: 1px solid #d8d8d8;
+		border-radius: 25px;
+		box-sizing: border-box;
+		margin: 3.75rem auto;
+		padding: 1rem 2rem;
+		font-size: 1rem;
+		line-height: 1.5rem;
+		display: flex;
+		align-items: center;
+		gap: 1rem;
+	}
 }
 
+.router-link {
+	color: inherit;
+	text-decoration: none;
+}
+.router-link:visited {
+	color: inherit;
+}
 
+@media screen and (max-width: 840px) {
+	.App {
+		.filter-block {
+			align-self: center;
+		}
+		button.see-more {
+			margin: 2rem auto;
+		}
+	}
+}
