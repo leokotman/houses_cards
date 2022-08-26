@@ -1,23 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import './App.scss';
+import Filter from "./components/Filter";
+import ProductsList from "./components/ProductsList";
+import arrow from "./assets/images/Chevron.svg";
+
+import { useState, useEffect } from "react";
 
 function App() {
+  async function fetchData () {
+    let response = await fetch("https://603e38c548171b0017b2ecf7.mockapi.io/homes");
+    let data = await response.json();
+    console.log(data);
+  }
+  useEffect(() => {
+    fetchData();
+  }, []);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Our Latest Developments</h1>
+      <section className="container filter-block">
+        <Filter />
+      </section>
+      <section className="container">
+        <ProductsList />
+      </section>
+      <button className="see-more">See more <img src={arrow} /></button>
     </div>
   );
 }

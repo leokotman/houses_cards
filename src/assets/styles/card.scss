@@ -1,0 +1,17 @@
+.card {
+    .card__img {
+        width: max-content;
+        position: relative;
+        
+        span {
+            position: absolute;
+            bottom: 0;
+            right: 0;
+        }
+    }
+
+    p span {
+        font-weight: bold;
+    }
+}
+
