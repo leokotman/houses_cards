@@ -16,7 +16,7 @@ function ProductCard(props) {
 	return (
 		<article className="card">
 			<div className="card__img">
-				<img alt="property" src="https://via.placeholder.com/380x230/9FDCD1" width="380"/>
+				<img alt="property" src="https://via.placeholder.com/380x230/9FDCD1" width="380" height="230"/>
 				<p className={findTagClass()}>
 					{props.home.type === supportAvailable && <span>Restaurants & </span>}
 					{props.home.type.replace(/([a-z])([A-Z])/g, "$1 $2")}

@@ -5,10 +5,12 @@
 
 	.card__img {
 		width: max-content;
+		height: max-content;
 		position: relative;
 
 		img {
 			max-width: 380px;
+			max-height: 230px;
 		}
 
 		p {
