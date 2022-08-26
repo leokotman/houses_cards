@@ -1,10 +1,8 @@
-import React from 'react'
-
-function Filter() {
+function Filter(props) {
   return (
     <div className="filter">
         <span>Filter</span>
-        <input type="text" />
+        <input type="text" className="filter__input" value={props.value} onChange={props.onChange} />
     </div>
   )
 }
