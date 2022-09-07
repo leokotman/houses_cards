@@ -1,14 +1,14 @@
 import "../assets/styles/card.scss";
 
 function ProductCard(props) {
-	const independentLiving = "IndependentLiving";
-	const supportAvailable = "SupportAvailable";
+	const INDEPENDENT_LIVING_TYPE = "IndependentLiving";
+	const SUPPORT_AVAILABLE_TYPE = "SupportAvailable";
 
 	// Different tag class for different property types
 	const findTagClass = () => {
-		if (props.home.type === independentLiving) {
+		if (props.home.type === INDEPENDENT_LIVING_TYPE) {
 			return "independent";
-		} else if (props.home.type === supportAvailable) {
+		} else if (props.home.type === SUPPORT_AVAILABLE_TYPE) {
 			return "support";
 		}
 	};
@@ -18,7 +18,7 @@ function ProductCard(props) {
 			<div className="card__img">
 				<img alt={'property ' + props.home.id + ' ' + props.home.title} src="https://via.placeholder.com/380x230/9FDCD1" width="380" height="230"/>
 				<p className={findTagClass()}>
-					{props.home.type === supportAvailable && <span>Restaurants & </span>}
+					{props.home.type === SUPPORT_AVAILABLE_TYPE && <span>Restaurants & </span>}
 					{props.home.type.replace(/([a-z])([A-Z])/g, "$1 $2")}
 				</p>
 			</div>
