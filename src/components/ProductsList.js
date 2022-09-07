@@ -5,10 +5,10 @@ import "../assets/styles/list.scss";
 function ProductsList(props) {
 	return (
 			<div className="product-list">
-			{props.homes.map((home, index) => {
+			{props.homes.map((home) => {
 				return (
-				<Link to={`/details/${home.id}`} key={index} className="router-link">
-					<ProductCard key={index} home={home} />	
+				<Link to={`/details/${home.id}`} key={home.id} className="router-link">
+					<ProductCard key={home.id} home={home} />	
 				</Link>
 				);
 			})}
